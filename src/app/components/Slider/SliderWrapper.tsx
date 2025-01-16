@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components';
+import styled, {css} from 'styled-components';
 
-export type WrapperProps = {
+type WrapperProps = {
     marks?: boolean;
 };
 

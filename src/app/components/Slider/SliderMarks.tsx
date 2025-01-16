@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-export type MarksStyledProps = {
+type MarksStyledProps = {
     position?: number;
     backgroundColor?: string;
 };

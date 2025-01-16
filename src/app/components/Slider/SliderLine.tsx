@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-export type LineFillProps = React.HTMLAttributes<HTMLDivElement> & {
+type LineFillProps = React.HTMLAttributes<HTMLDivElement> & {
     position?: number;
     backgroundColor?: string;
 };
@@ -14,7 +14,7 @@ export const LineFill = styled.div.attrs((props: LineFillProps) => ({
     background-color: ${props => props.backgroundColor};
 `
 ;
-export type LineStyledProps = {
+type LineStyledProps = {
     backgroundColor?: string;
 };
 

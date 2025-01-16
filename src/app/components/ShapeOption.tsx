@@ -8,7 +8,7 @@ const ShapeOptions: React.FC = () => {
     ]
 
     return (
-        <div className="border border-slate-500 grid grid-cols-2 gap-4 max-w-[30vh] max-h-[30vh] justify-center items-center m-auto">
+        <div className="grid grid-cols-2 gap-4 max-w-[30vh] max-h-[30vh] justify-center items-center m-auto">
             {options.map((shape: string) => {
             return (
                 <div

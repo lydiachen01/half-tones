@@ -1,10 +1,11 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { ButtonHTMLAttributes } from 'react';
 
-export interface DotStyledProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface DotStyledProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     readonly position?: number;
     readonly backgroundColor?: string;
 }
+
 export const DotStyled = styled.button.attrs((props: DotStyledProps) => ({
     style: {
         left: `${props.position}%`,
