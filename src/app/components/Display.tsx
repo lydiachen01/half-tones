@@ -1,10 +1,11 @@
 'use client'
 
 import React, { useState, useEffect, useRef, useMemo } from 'react';
+import ExportSVGButton from './ExportSVG';
 
 const Display: React.FC = () => {
     const ref = useRef<HTMLDivElement>(null);
-    const [dimensions, setDimensions] = useState({ width: 300, height: 300 });
+    const [dimensions, setDimensions] = useState({ width: 400, height: 400 });
 
     useEffect(() => {
         const observer = new ResizeObserver(([entry]) => {
@@ -46,7 +47,7 @@ const Display: React.FC = () => {
     return (
         <div
             ref={ref}
-            className="border border-2 border-slate-500 h-[30vh] w-[30vh] rounded"
+            className="border border-2 border-slate-500 h-[40vh] w-[40vh] rounded"
             style={{ position: 'relative' }}
         >
             <div style={{ position: 'absolute', top: 0, left: 0, opacity: 0.1 }}>
@@ -58,8 +59,11 @@ const Display: React.FC = () => {
 
 const CenteredDisplay: React.FC = () => {
     return (
-        <div className="flex justify-center items-center h-screen">
+        <div className="flex flex-col items-center justify-center h-screen">
             <Display />
+            <span className='mt-6'>
+                <ExportSVGButton />
+            </span>
         </div>
     );
 };
